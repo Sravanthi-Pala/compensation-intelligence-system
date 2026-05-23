@@ -1,0 +1,99 @@
+import Link from "next/link";
+export default function HomePage() {
+  const companies = [
+    "Google",
+    "Microsoft",
+    "Amazon",
+    "Flipkart",
+  ];
+
+  return (
+    <main className="min-h-screen bg-gray-100 p-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="bg-white rounded-3xl shadow-lg p-10">
+          <h1 className="text-5xl font-bold text-gray-900">
+            Compensation Intelligence System
+          </h1>
+
+          <p className="mt-4 text-lg text-gray-600">
+            Levels-based salary insights across top tech
+            companies in India.
+          </p>
+
+
+
+<div className="mt-8">
+  <form action="/salaries">
+    <input
+      name="company"
+      type="text"
+      placeholder="Search companies..."
+      className="w-full p-4 rounded-2xl border border-gray-300 outline-none focus:ring-4 focus:ring-blue-400"
+    />
+  </form>
+</div>
+<div className="flex flex-wrap gap-4 mt-6">
+  {companies.map((company) => (
+    <Link
+      key={company}
+      href={`/company/${company.toLowerCase()}`}
+      className="px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-semibold hover:scale-105 transition-all duration-300 shadow-lg"
+    >
+      {company}
+    </Link>
+  ))}
+</div>
+
+
+          
+        </div>
+<div className="grid md:grid-cols-3 gap-6 mt-10">
+  <Link
+    href="/salaries"
+    className="bg-white p-6 rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border"
+  >
+    <h2 className="text-2xl font-bold text-indigo-600">
+      Salary Table
+    </h2>
+
+    <p className="mt-3 text-gray-600">
+      Browse all salary entries with filters.
+    </p>
+  </Link>
+
+<Link
+  href="/company/google"
+  className="group bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border"
+>
+  <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-2xl">
+    📊
+  </div>
+
+  <h2 className="text-2xl font-bold text-blue-600 mt-5">
+    Company Analytics
+  </h2>
+
+  <p className="mt-3 text-gray-600">
+    View compensation distributions, median salary,
+    and level-based insights.
+  </p>
+</Link>
+
+  <Link
+    href="/compare"
+    className="bg-white p-6 rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border"
+  >
+    <h2 className="text-2xl font-bold text-green-600">
+      Compare Salaries
+    </h2>
+
+    <p className="mt-3 text-gray-600">
+      Compare packages side-by-side.
+    </p>
+  </Link>
+</div>
+      </div>
+    </main>
+
+);
+}

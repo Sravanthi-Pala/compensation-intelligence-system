@@ -1,0 +1,261 @@
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
+
+async function main() {
+  await prisma.salary.deleteMany();
+
+  await prisma.salary.createMany({
+    data: [
+      {
+        company: "google",
+        role: "Software Engineer",
+        level: "L3",
+        location: "Bangalore",
+        experienceYears: 3,
+        baseSalary: 2500000,
+        bonus: 300000,
+        stock: 500000,
+        totalCompensation: 3300000,
+      },
+      {
+        company: "google",
+        role: "Software Engineer",
+        level: "L4",
+        location: "Hyderabad",
+        experienceYears: 5,
+        baseSalary: 3500000,
+        bonus: 500000,
+        stock: 800000,
+        totalCompensation: 4800000,
+      },
+      {
+        company: "google",
+        role: "Senior Engineer",
+        level: "L5",
+        location: "Bangalore",
+        experienceYears: 8,
+        baseSalary: 5000000,
+        bonus: 900000,
+        stock: 1500000,
+        totalCompensation: 7400000,
+      },
+
+      {
+        company: "microsoft",
+        role: "SDE",
+        level: "L61",
+        location: "Hyderabad",
+        experienceYears: 2,
+        baseSalary: 2200000,
+        bonus: 200000,
+        stock: 300000,
+        totalCompensation: 2700000,
+      },
+      {
+        company: "microsoft",
+        role: "SDE2",
+        level: "L62",
+        location: "Bangalore",
+        experienceYears: 4,
+        baseSalary: 3000000,
+        bonus: 400000,
+        stock: 700000,
+        totalCompensation: 4100000,
+      },
+      {
+        company: "microsoft",
+        role: "Senior Engineer",
+        level: "L63",
+        location: "Hyderabad",
+        experienceYears: 7,
+        baseSalary: 4200000,
+        bonus: 650000,
+        stock: 1000000,
+        totalCompensation: 5850000,
+      },
+
+      {
+        company: "amazon",
+        role: "SDE1",
+        level: "L4",
+        location: "Bangalore",
+        experienceYears: 2,
+        baseSalary: 2000000,
+        bonus: 250000,
+        stock: 350000,
+        totalCompensation: 2600000,
+      },
+      {
+        company: "amazon",
+        role: "SDE2",
+        level: "L5",
+        location: "Hyderabad",
+        experienceYears: 4,
+        baseSalary: 3200000,
+        bonus: 450000,
+        stock: 600000,
+        totalCompensation: 4250000,
+      },
+      {
+        company: "amazon",
+        role: "Tech Lead",
+        level: "L6",
+        location: "Bangalore",
+        experienceYears: 7,
+        baseSalary: 4500000,
+        bonus: 700000,
+        stock: 1200000,
+        totalCompensation: 6400000,
+      },
+
+      {
+        company: "flipkart",
+        role: "SDE2",
+        level: "L5",
+        location: "Bangalore",
+        experienceYears: 4,
+        baseSalary: 3200000,
+        bonus: 450000,
+        stock: 600000,
+        totalCompensation: 4250000,
+      },
+      {
+        company: "flipkart",
+        role: "Senior SDE",
+        level: "L6",
+        location: "Bangalore",
+        experienceYears: 6,
+        baseSalary: 3800000,
+        bonus: 600000,
+        stock: 950000,
+        totalCompensation: 5350000,
+      },
+
+      {
+        company: "uber",
+        role: "Software Engineer",
+        level: "L3",
+        location: "Hyderabad",
+        experienceYears: 3,
+        baseSalary: 2800000,
+        bonus: 350000,
+        stock: 700000,
+        totalCompensation: 3850000,
+      },
+      {
+        company: "uber",
+        role: "Senior Engineer",
+        level: "L5",
+        location: "Bangalore",
+        experienceYears: 7,
+        baseSalary: 4800000,
+        bonus: 850000,
+        stock: 1500000,
+        totalCompensation: 7150000,
+      },
+
+      {
+        company: "razorpay",
+        role: "Backend Engineer",
+        level: "L3",
+        location: "Bangalore",
+        experienceYears: 2,
+        baseSalary: 1800000,
+        bonus: 200000,
+        stock: 300000,
+        totalCompensation: 2300000,
+      },
+      {
+        company: "razorpay",
+        role: "Senior Backend Engineer",
+        level: "L5",
+        location: "Bangalore",
+        experienceYears: 6,
+        baseSalary: 3500000,
+        bonus: 500000,
+        stock: 800000,
+        totalCompensation: 4800000,
+      },
+
+      {
+        company: "swiggy",
+        role: "SDE1",
+        level: "L3",
+        location: "Bangalore",
+        experienceYears: 2,
+        baseSalary: 1700000,
+        bonus: 150000,
+        stock: 250000,
+        totalCompensation: 2100000,
+      },
+      {
+        company: "swiggy",
+        role: "SDE2",
+        level: "L4",
+        location: "Bangalore",
+        experienceYears: 4,
+        baseSalary: 2600000,
+        bonus: 350000,
+        stock: 450000,
+        totalCompensation: 3400000,
+      },
+
+      {
+        company: "ola",
+        role: "Software Engineer",
+        level: "L3",
+        location: "Bangalore",
+        experienceYears: 2,
+        baseSalary: 1600000,
+        bonus: 100000,
+        stock: 200000,
+        totalCompensation: 1900000,
+      },
+      {
+        company: "ola",
+        role: "Senior Engineer",
+        level: "L5",
+        location: "Bangalore",
+        experienceYears: 6,
+        baseSalary: 3400000,
+        bonus: 450000,
+        stock: 700000,
+        totalCompensation: 4550000,
+      },
+
+      {
+        company: "cred",
+        role: "Frontend Engineer",
+        level: "L3",
+        location: "Bangalore",
+        experienceYears: 3,
+        baseSalary: 2100000,
+        bonus: 250000,
+        stock: 350000,
+        totalCompensation: 2700000,
+      },
+      {
+        company: "cred",
+        role: "Senior Frontend Engineer",
+        level: "L5",
+        location: "Bangalore",
+        experienceYears: 7,
+        baseSalary: 3900000,
+        bonus: 650000,
+        stock: 1000000,
+        totalCompensation: 5550000,
+      }
+    ],
+  });
+
+  console.log("Seed data inserted successfully");
+}
+
+main()
+  .catch((e) => {
+    console.error(e);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });
