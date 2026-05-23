@@ -13,7 +13,7 @@ Unlike traditional salary sites like AmbitionBox or Glassdoor that compare "Seni
 
 | Platform | URL |
 |----------|-----|
-| **Live Application** | https://compensation-intelligence-system.onrender.com |
+| **Live Application** | https://compensation-intelligence-system-6hfp.onrender.com|
 | **GitHub Repository** | https://github.com/Sravanthi-Pala/compensation-intelligence-system |
 
 ---
