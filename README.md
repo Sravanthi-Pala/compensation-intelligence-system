@@ -6,7 +6,6 @@ A production-grade compensation intelligence system that helps tech professional
 
 Unlike traditional salary sites like AmbitionBox or Glassdoor that compare "Senior Engineer" across different companies, this system recognizes that the same title means different things at different companies. An L4 at Google is comparable to an L62 at Microsoft, not just by title but by actual responsibility and compensation band.
 
-This project was built as a submission for a Full Stack Developer Internship (Track C - Compensation Intelligence System).
 
 ---
 
